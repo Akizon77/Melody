@@ -163,7 +163,7 @@ melody_sh() {
 
     # 执行脚本
     echo "正在启动 Melody-sh.py 脚本..."
-    /root/myenv/bin/python "$SCRIPT_PATH" &
+    nohup /root/myenv/bin/python "$SCRIPT_PATH" > /dev/null 2>&1 &
     echo $! > "$PID_FILE"
     echo "脚本已启动，后台运行..."
 }
